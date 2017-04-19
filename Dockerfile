@@ -1,4 +1,4 @@
-FROM docker pull 1science/sbt
+FROM 1science/sbt
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
