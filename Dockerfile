@@ -16,4 +16,4 @@ COPY startup.sh /opt/VFB/owlery/startup.sh
 
 RUN chmod +x /opt/VFB/owlery/startup.sh
 
-ENTRYPOINT ['/bin/sh -c /opt/VFB/owlery/startup.sh']
+ENTRYPOINT ['/opt/VFB/owlery/startup.sh']
