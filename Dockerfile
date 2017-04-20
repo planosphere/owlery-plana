@@ -12,3 +12,8 @@ git clone https://github.com/VirtualFlyBrain/owlery.git
 
 COPY application.conf /opt/VFB/owlery/src/main/resources/application.conf
 
+COPY startup.sh /opt/VFB/owlery/startup.sh
+
+RUN chmod +x /opt/VFB/owlery/startup.sh
+
+ENTRYPOINT ['/bin/sh -c /opt/VFB/owlery/startup.sh']
