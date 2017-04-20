@@ -18,7 +18,7 @@ RUN chmod +x /opt/VFB/owlery/startup.sh
 RUN cd /opt/VFB/owlery/ && \
 sbt debian:packageBin
 
-RUN dpkg -i /opt/VFB/owlery/owlery_*_all.deb
+RUN dpkg -i /opt/VFB/owlery/owlery_0.10_all.deb
 
 EXPOSE 8080
 
