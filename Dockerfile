@@ -1,10 +1,9 @@
-FROM 1science/sbt
+FROM hseeberger/scala-sbt
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
-ENV SBT_VERSION=0.13.9
-
-RUN apk update && apk add git
+RUN apt-get update && \
+apt-get install git
 
 RUN mkdir -p /opt/VFB && \
 cd /opt/VFB/ && \
@@ -15,6 +14,10 @@ COPY application.conf /opt/VFB/owlery/src/main/resources/application.conf
 COPY startup.sh /opt/VFB/owlery/startup.sh
 
 RUN chmod +x /opt/VFB/owlery/startup.sh
+
+RUN cd /opt/VFB/owlery/ && \
+sbt debian:packageBin && \
+dpkg -i target/owlery_0.*_all.deb
 
 EXPOSE 8080
 
