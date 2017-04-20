@@ -16,8 +16,9 @@ COPY startup.sh /opt/VFB/owlery/startup.sh
 RUN chmod +x /opt/VFB/owlery/startup.sh
 
 RUN cd /opt/VFB/owlery/ && \
-sbt debian:packageBin && \
-dpkg -i target/owlery_0.*_all.deb
+sbt debian:packageBin
+
+RUN dpkg -i /opt/VFB/owlery/owlery_*_all.deb
 
 EXPOSE 8080
 
