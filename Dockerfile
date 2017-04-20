@@ -16,4 +16,6 @@ COPY startup.sh /opt/VFB/owlery/startup.sh
 
 RUN chmod +x /opt/VFB/owlery/startup.sh
 
+EXPOSE 8080
+
 ENTRYPOINT ["/opt/VFB/owlery/startup.sh"]
