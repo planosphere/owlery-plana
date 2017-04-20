@@ -2,4 +2,4 @@
 
 cd /opt/VFB/owlery
 
-sbt run
+sbt start
