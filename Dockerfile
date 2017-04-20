@@ -10,3 +10,5 @@ RUN mkdir -p /opt/VFB && \
 cd /opt/VFB/ && \
 git clone https://github.com/VirtualFlyBrain/owlery.git
 
+COPY application.conf /opt/VFB/owlery/src/main/resources/application.conf
+
