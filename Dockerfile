@@ -3,7 +3,7 @@ FROM hseeberger/scala-sbt
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
 RUN apt-get update && \
-apt-get install git fakeroot
+apt-get install git fakeroot archive
 
 RUN mkdir -p /opt/VFB && \
 cd /opt/VFB/ && \
