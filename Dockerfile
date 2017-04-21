@@ -3,7 +3,7 @@ FROM hseeberger/scala-sbt
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
 RUN apt-get update && \
-apt-get install git fakeroot archive
+apt-get install git fakeroot
 
 RUN mkdir -p /opt/VFB && \
 cd /opt/VFB/ && \
@@ -18,7 +18,7 @@ RUN chmod +x /opt/VFB/owlery/startup.sh
 RUN cd /opt/VFB/owlery/ && \
 sbt debian:packageBin
 
-RUN dpkg -i /opt/VFB/owlery/owlery_0.10_all.deb
+RUN apt-get update && ls /opt/VFB/owlery/ && ls /opt/VFB/owlery/target/ && dpkg -i /opt/VFB/owlery/target/owlery_0.10_all.deb
 
 EXPOSE 8080
 
