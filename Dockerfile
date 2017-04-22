@@ -1,10 +1,9 @@
-FROM 1science/sbt
+FROM dengyiping/scala-sbt-ubuntu
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
-ENV SBT_VERSION=0.13.9
-
-RUN apk update && apk add git
+RUN apt-get update -y && \
+apt-get install -y git fakeroot
 
 RUN mkdir -p /opt/VFB && \
 cd /opt/VFB/ && \
@@ -16,6 +15,13 @@ COPY startup.sh /opt/VFB/owlery/startup.sh
 
 RUN chmod +x /opt/VFB/owlery/startup.sh
 
-EXPOSE 8080
+RUN cd /opt/VFB/owlery/ && \
+sbt debian:packageBin
 
-ENTRYPOINT ["/opt/VFB/owlery/startup.sh"]
+RUN apt-get update && ls /opt/VFB/owlery/ && ls /opt/VFB/owlery/target/ && dpkg -i /opt/VFB/owlery/target/owlery_0.10_all.deb
+
+RUN rm -rf /opt/VFB
+
+EXPOSE 9024
+
+ENTRYPOINT ["/usr/bin/owlery"]
