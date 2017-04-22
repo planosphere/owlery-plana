@@ -2,7 +2,7 @@ FROM dengyiping/scala-sbt-ubuntu
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
-RUN apt-get update y && \
+RUN apt-get update -y && \
 apt-get install -y git fakeroot
 
 RUN mkdir -p /opt/VFB && \
