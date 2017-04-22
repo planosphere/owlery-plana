@@ -1,4 +1,4 @@
-FROM hseeberger/scala-sbt
+FROM dengyiping/scala-sbt-ubuntu
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
