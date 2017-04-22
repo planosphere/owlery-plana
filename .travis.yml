@@ -3,7 +3,7 @@ services:
   
 script:
   - docker build -t test-image:test .
-  - docker run -d --name test -p 80:9024 test-image:test
+  - docker run -d --name test -p localhost:80:9024 test-image:test
   - sleep 2m
   - docker logs test
-  - curl -sSf http://localhost/owlery/kbs/vfb
+  - curl -sSf http://localhost/kbs/vfb
