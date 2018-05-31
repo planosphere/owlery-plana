@@ -3,7 +3,7 @@ services:
   
 script:
   - docker build -t test-image:test .
-  - docker run -d --name test -p 127.0.0.1:80:9024 test-image:test
+  - docker run -d --name test -p 127.0.0.1:80:8080 test-image:test
   - sleep 2m
   - docker logs test
   - curl -sSf http://127.0.0.1/kbs/vfb
