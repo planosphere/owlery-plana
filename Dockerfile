@@ -1,4 +1,4 @@
-FROM phenoscape/owlery
+FROM phenoscape/owlery:edge
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
