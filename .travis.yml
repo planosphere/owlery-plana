@@ -1,9 +1,39 @@
 services:
   - docker
-  
+
+env:
+  global:
+    - COMMIT=${TRAVIS_COMMIT::8}
+  matrix:
+    - VFBSUB=local OWLURL=http://www.virtualflybrain.org/owl/vfb.owl
+    - VFBSUB=Current OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/Current/src/owl/vfb.owl.gz?raw=true
+    - VFBSUB=dev  OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/dev/src/owl/vfb.owl.gz?raw=true
+    - VFBSUB=scala-dev OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/scala-dev/src/owl/vfb.owl.gz?raw=true
+
 script:
-  - docker build -t test-image:test .
-  - docker run -d --name test -p 127.0.0.1:80:9024 test-image:test
+  - echo -e "travis_fold:start:Geppetto-Config"
+  - export REPO=$(echo ${TRAVIS_REPO_SLUG} | awk '{gsub(/\./,"_",$0);print tolower($0)}')
+  - export REPO=${REPO/robbie1977/rcourt}
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - sed -i "s|http://www.virtualflybrain.org/owl/vfb.owl|${OWLURL}|g" Dockerfile
+  - sed -i "s|http://www.virtualflybrain.org/owl/vfb.owl|${OWLURL}|g" application.conf
+  - echo -e "travis_fold:end:Geppetto-Config"
+  - docker build -f Dockerfile -t $REPO:$VFBSUB . 
+  - |
+    if [ "$VFBSUB" != "local" ]; then
+      docker tag $REPO:$VFBSUB $REPO:$TAG-$VFBSUB
+    fi
+  - docker run -d --name test -p 127.0.0.1:80:8080 $REPO:$VFBSUB
   - sleep 2m
   - docker logs test
   - curl -sSf http://127.0.0.1/kbs/vfb
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - |
+    if [ "$VFBSUB" != "local" ]; then
+      docker push $REPO:$TAG-$VFBSUB
+    else
+      docker push $REPO:$TAG
+    fi
+    
