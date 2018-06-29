@@ -7,3 +7,7 @@ Owlery server loaded with VFB.owl
 docker run -p 80:8080 virtualflybrain/owlery-vfb
 ```
 
+Note: env OWLURL overrides the called url
+```
+docker run -p 80:8080 --env=OWLURL=http://site.com/vfb.owl[.gz] virtualflybrain/owlery-vfb
+```
