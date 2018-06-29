@@ -5,7 +5,7 @@ env:
   global:
     - COMMIT=${TRAVIS_COMMIT::8}
   matrix:
-    - VFBSUB=local OWLURL=http://www.virtualflybrain.org/owl/vfb.owl
+    - VFBSUB=local OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/Current/src/owl/vfb.owl.gz?raw=true
     - VFBSUB=Current OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/Current/src/owl/vfb.owl.gz?raw=true
     - VFBSUB=dev  OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/dev/src/owl/vfb.owl.gz?raw=true
     - VFBSUB=scala-dev OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/scala-dev/src/owl/vfb.owl.gz?raw=true
