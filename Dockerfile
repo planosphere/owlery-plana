@@ -8,6 +8,4 @@ COPY application.conf /srv/conf/application.conf
 
 COPY startup.sh /startup.sh
 
-RUN chmod +x /startup.sh
-
 ENTRYPOINT ["/startup.sh"]
