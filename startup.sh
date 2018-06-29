@@ -1,7 +1,5 @@
 #!/bin/sh
 
-cd /opt/VFB/owlery
-
 sed -i "s|http://www.virtualflybrain.org/owl/vfb.owl|${OWLURL}|g" /srv/conf/application.conf
 
 
