@@ -4,6 +4,6 @@
 Owlery server loaded with VFB.owl  
 
 ```
-docker run -p 80:8080 virtualflybrain/owlery-vfb:edge
+docker run -p 80:8080 virtualflybrain/owlery-vfb
 ```
 
