@@ -2,7 +2,7 @@ FROM phenoscape/owlery
 
 MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
-ENV OWLURL=http://www.virtualflybrain.org/owl/vfb.owl
+ENV OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/Current/src/owl/vfb.owl.gz?raw=true
 
 COPY application.conf /srv/conf/application.conf
 
