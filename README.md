@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/srobb1/owlery-plana.svg?branch=master)](https://travis-ci.org/srobb1/owlery-plana)[![Docker Hub](https://www.shippable.com/assets/images/logos/docker-hub.jpg)](https://hub.docker.com/r/srobb1/owlery-plana/)
 
-# owlery-plana
-Owlery server loaded with plana.owl  
+# Owlery-PLANA
+Owlery server loaded with the Planarian Anatomy Ontology file plana.owl. Find out more info about [PLANA Ontology here](https://planosphere.stowers.org/anatomyontology) .
 
 This repo was forked from [owlery-vfb](https://github.com/VirtualFlyBrain/owlery-vfb). owlery-vfb and owlery-plana are build on top of [phenoscape-owlery](https://github.com/phenoscape/owlery). Check out phenoscape/owlery github repo for more info on what this actually is. 
 
