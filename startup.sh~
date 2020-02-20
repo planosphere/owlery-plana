@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Loading OWLERY"
-sed -i "s|http://purl.obolibrary.org/obo/plana.owl|${OWLURL}|g" /srv/conf/application.conf
+sed -i "s|http://www.virtualflybrain.org/owl/vfb.owl|${OWLURL}|g" /srv/conf/application.conf
 
 cat /srv/conf/application.conf
 

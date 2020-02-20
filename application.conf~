@@ -12,8 +12,8 @@ owlery {
 	host = localhost
 	kbs = [
 		{
-			name = plana
-			location = "http://purl.obolibrary.org/obo/plana.owl"
+			name = vfb
+			location = "http://www.virtualflybrain.org/owl/vfb.owl"
 			reasoner = elk
 		}
 	]

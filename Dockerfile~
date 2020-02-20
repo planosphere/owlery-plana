@@ -1,8 +1,8 @@
 FROM phenoscape/owlery
 
-MAINTAINER Sofia Robb - PLANA Planarian Anatomy Ontology <smr@stowers.org>
+MAINTAINER Robbie - Virtual Fly Brain <rcourt@ed.ac.uk>
 
-ENV OWLURL=http://purl.obolibrary.org/obo/plana.owl
+ENV OWLURL=https://github.com/VirtualFlyBrain/VFB_owl/blob/Current/src/owl/vfb.owl.gz?raw=true
 
 COPY application.conf /srv/conf/application.conf
 
