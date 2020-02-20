@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/VirtualFlyBrain/owlery-vfb.svg?branch=master)](https://travis-ci.org/VirtualFlyBrain/owlery-vfb)[![Docker Hub](https://www.shippable.com/assets/images/logos/docker-hub.jpg)](https://hub.docker.com/r/virtualflybrain/owlery-vfb/)
+[![Build Status](https://travis-ci.org/srobb1/owlery-plana.svg?branch=master)](https://travis-ci.org/srobb1/owlery-plana)[![Docker Hub](https://www.shippable.com/assets/images/logos/docker-hub.jpg)](https://hub.docker.com/r/srobb1/owlery-plana/)
 
 # owlery-plana
 Owlery server loaded with plana.owl  
@@ -26,7 +26,7 @@ http://localhost:8080/kbs/plana
 
 ## Stop the image
 
-When you are done with your queries you need to stop the image. In another terminal window and run these commands:
+When you are done with your queries you need to stop the image. In another terminal window run these commands:
 ```
 docker ps
 ```
