@@ -24,7 +24,7 @@ docker image build -t owlery-plana:1.0 .
 
 Now run your image:
 ```
-docker container run --publish 8080:8080 --name op2 owlery-plana:1.0
+docker container run --publish 8080:8080 --name op owlery-plana:1.0
 ```
 
 go to browser and run this:
