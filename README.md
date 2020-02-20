@@ -3,7 +3,7 @@
 # owlery-plana
 Owlery server loaded with plana.owl  
 
-This repo was forked from [owlery-vfb](https://github.com/VirtualFlyBrain/owlery-vfb). owlery-vfb and owlery-plana is build on top of [phenoscape-owlery](https://github.com/phenoscape/owlery). Check out phenoscape/owlery github repo for more info on what this actually is. 
+This repo was forked from [owlery-vfb](https://github.com/VirtualFlyBrain/owlery-vfb). owlery-vfb and owlery-plana are build on top of [phenoscape-owlery](https://github.com/phenoscape/owlery). Check out phenoscape/owlery github repo for more info on what this actually is. 
 
 ## How did Owlery-PLANA come to be?
 The owlery-vfb was forked and every instance of vfb.owl url was replaced with plana.owl url. 'vfb' was replaced with 'plana' in the application.conf.
