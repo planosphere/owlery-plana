@@ -1,18 +1,14 @@
 [![Build Status](https://travis-ci.org/VirtualFlyBrain/owlery-vfb.svg?branch=master)](https://travis-ci.org/VirtualFlyBrain/owlery-vfb)[![Docker Hub](https://www.shippable.com/assets/images/logos/docker-hub.jpg)](https://hub.docker.com/r/virtualflybrain/owlery-vfb/)
 
-# owlery-vfb
-Owlery server loaded with VFB.owl  
+# owlery-plana
+Owlery server loaded with plana.owl  
 
-```
-docker run -p 80:8080 virtualflybrain/owlery-vfb
-```
+Forked from [owlery-vfb](https://github.com/VirtualFlyBrain/owlery-vfb). Check it out. They have a registered docker image to use. owlery-plana does not. 
 
-Note: env OWLURL overrides the called url
-```
-docker run -p 80:8080 --env=OWLURL=http://site.com/vfb.owl[.gz] virtualflybrain/owlery-vfb
-```
+The owlery-vfb was forked and every instance of vfb.owl url was replaced with plana.owl url. 'vfb' was replaced with 'plana'
 
-## For PLANA 
+
+## Notes
 by sofia 02-19-2020
 
 __Build & Run__
