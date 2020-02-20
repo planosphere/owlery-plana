@@ -56,3 +56,45 @@ This returns:
 	"@context": "https://owlery.phenoscape.org/json/context.jsonld"
 }
 ```
+
+
+## building and pushing to docker hub
+
+build an image with the name srobb1/owlery-plana
+```
+docker build --tag srobb1/owlery-plana .
+```
+
+push it to docker hub
+
+```
+ docker push srobb1/owlery-plan
+```
+
+now run it by referencing it from docker hub
+
+```
+docker run -p 8080:8080 srobb1/owlery-plana
+```
+
+
+## stop the image
+
+```
+docker ps
+```
+
+find the container id
+
+```
+docker ps
+CONTAINER ID        IMAGE                 COMMAND             CREATED              STATUS              PORTS                    NAMES
+fa4c96eac049        srobb1/owlery-plana   "/startup.sh"       About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   competent_tu
+```
+
+stop the container
+
+```
+docker stop fa4c96eac049
+```
+
