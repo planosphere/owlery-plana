@@ -161,10 +161,15 @@ Build an image with the name srobb1/owlery-plana
 docker build --tag srobb1/owlery-plana .
 ```
 
+Note: To update all the dependencies in this dockerfile use pull and no-cache options:
+```
+docker build --pull --no-cache --tag srobb1/owlery-plana .
+```
+
 Push it to docker hub. You will need a docker account with the same name as the first part of the image name [dockerid]/[imagename].
 
 ```
- docker push srobb1/owlery-plan
+ docker push srobb1/owlery-plana
 ```
 
 Now run it by referencing it from docker hub
