@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/srobb1/owlery-plana.svg?branch=master)](https://travis-ci.org/srobb1/owlery-plana)[![Docker Hub](https://www.shippable.com/assets/images/logos/docker-hub.jpg)](https://hub.docker.com/r/srobb1/owlery-plana/)
+[![Build Status](https://travis-ci.org/planosphere/owlery-plana.svg?branch=master)](https://travis-ci.org/planosphere/owlery-plana)[![Docker Hub](https://www.shippable.com/assets/images/logos/docker-hub.jpg)](https://hub.docker.com/r/planosphere/owlery-plana/)
 
 # Owlery-PLANA
 Owlery server loaded with the Planarian Anatomy Ontology file [plana.owl](http://purl.obolibrary.org/obo/plana.owl). Find out more info about [PLANA Ontology here](https://planosphere.stowers.org/anatomyontology).
@@ -16,7 +16,7 @@ You don't even need to clone this repo, just run the command below. You do need 
 
 Start Owlery-PLANA by using the run command:
 ```
-docker run -p 8080:8080 srobb1/owlery-plana
+docker run -p 8080:8080 planosphere/owlery-plana
 ```
 
 In your browser run this:
@@ -35,7 +35,7 @@ Find the owlery container id
 ```
 docker ps
 CONTAINER ID        IMAGE                 COMMAND             CREATED              STATUS              PORTS                    NAMES
-fa4c96eac049        srobb1/owlery-plana   "/startup.sh"       About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   competent_tu
+fa4c96eac049        planosphere/owlery-plana   "/startup.sh"       About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   competent_tu
 ```
 
 Stop the container
@@ -156,25 +156,25 @@ returns:
 This was already done so you don't have to do this unless you want to customize with your own owl file. After editing the vfb files this is what was done to build and make the image public.
 
 
-Build an image with the name srobb1/owlery-plana
+Build an image with the name planosphere/owlery-plana
 ```
-docker build --tag srobb1/owlery-plana .
+docker build --tag planosphere/owlery-plana .
 ```
 
 Note: To update all the dependencies in this dockerfile use pull and no-cache options:
 ```
-docker build --pull --no-cache --tag srobb1/owlery-plana .
+docker build --pull --no-cache --tag planosphere/owlery-plana .
 ```
 
 Push it to docker hub. You will need a docker account with the same name as the first part of the image name [dockerid]/[imagename].
 
 ```
- docker push srobb1/owlery-plana
+ docker push planosphere/owlery-plana
 ```
 
 Now run it by referencing it from docker hub
 ```
-docker run -p 8080:8080 srobb1/owlery-plana
+docker run -p 8080:8080 planosphere/owlery-plana
 ```
 
 
